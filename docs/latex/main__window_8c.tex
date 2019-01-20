@@ -1,0 +1,80 @@
+\hypertarget{main__window_8c}{}\section{src/main\+\_\+window.c File Reference}
+\label{main__window_8c}\index{src/main\+\_\+window.\+c@{src/main\+\_\+window.\+c}}
+{\ttfamily \#include \char`\"{}../include/main\+\_\+window.\+h\char`\"{}}\newline
+Include dependency graph for main\+\_\+window.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{main__window_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{main__window_8c_adcf0e83db47ee039761c9b42887a6c6c}{main\+\_\+window\+\_\+new}} (Gtk\+Application $\ast$app)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main__window_8c_adcf0e83db47ee039761c9b42887a6c6c}\label{main__window_8c_adcf0e83db47ee039761c9b42887a6c6c}} 
+\index{main\+\_\+window.\+c@{main\+\_\+window.\+c}!main\+\_\+window\+\_\+new@{main\+\_\+window\+\_\+new}}
+\index{main\+\_\+window\+\_\+new@{main\+\_\+window\+\_\+new}!main\+\_\+window.\+c@{main\+\_\+window.\+c}}
+\subsubsection{\texorpdfstring{main\+\_\+window\+\_\+new()}{main\_window\_new()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ main\+\_\+window\+\_\+new (\begin{DoxyParamCaption}\item[{Gtk\+Application $\ast$}]{app }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file main\+\_\+window.\+c.
+
+
+
+Referenced by activate().
+
+
+\begin{DoxyCode}
+7                                                 \{
+8     GtkWidget *window;
+9     GtkWidget *mainContainer;
+10 
+11     window = gtk\_application\_window\_new (app);
+12     gtk\_window\_set\_title (GTK\_WINDOW (window), \textcolor{stringliteral}{"Ogród zoologiczny"});
+13     gtk\_window\_set\_default\_size (GTK\_WINDOW (window), 500, 500);
+14 
+15     mainContainer = gtk\_grid\_new();
+16     gtk\_container\_add(GTK\_CONTAINER (window), GTK\_WIDGET (mainContainer));
+17 
+18     GtkWidget *containerTable;
+19     containerTable = gtk\_scrolled\_window\_new(NULL, NULL);
+20     gtk\_widget\_set\_hexpand(containerTable, 1);
+21     gtk\_widget\_set\_vexpand(containerTable, 1);
+22     GtkWidget *table;
+23     table = gtk\_grid\_new();
+24     gtk\_container\_add(GTK\_CONTAINER(containerTable), GTK\_WIDGET(table));
+25     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<200; ++i)\{
+26         GtkWidget *label = gtk\_label\_new(\textcolor{stringliteral}{"Test"});
+27         gtk\_label\_set\_xalign(GTK\_LABEL (label), 0.0);
+28         gtk\_widget\_set\_margin\_start(label, 5);
+29         gtk\_widget\_set\_margin\_top(label, 5);
+30         gtk\_widget\_set\_hexpand(label, TRUE);
+31         gtk\_grid\_attach(GTK\_GRID (table), label, 0, i, 1, 1);
+32     \}
+33 
+34     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (containerTable), 0, 1, 1, 1);
+35 
+36     GtkWidget *buttonAddAnimal;
+37     buttonAddAnimal = gtk\_button\_new();
+38     gtk\_button\_set\_label(GTK\_BUTTON (buttonAddAnimal), \textcolor{stringliteral}{"Dodaj zwierzę"});
+39     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (buttonAddAnimal), 0, 2, 1, 1);
+40     gtk\_widget\_set\_hexpand(buttonAddAnimal, 1);
+41     gtk\_widget\_show\_all (window);
+42 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8c_adcf0e83db47ee039761c9b42887a6c6c_icgraph}
+\end{center}
+\end{figure}

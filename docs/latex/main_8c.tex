@@ -1,0 +1,105 @@
+\hypertarget{main_8c}{}\section{src/main.c File Reference}
+\label{main_8c}\index{src/main.\+c@{src/main.\+c}}
+{\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
+{\ttfamily \#include $<$curl/curl.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../include/main\+\_\+window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/services/http.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a}{activate}} (Gtk\+Application $\ast$app, gpointer user\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Initialize UI. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a}\label{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a}} 
+\index{main.\+c@{main.\+c}!activate@{activate}}
+\index{activate@{activate}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily static void activate (\begin{DoxyParamCaption}\item[{Gtk\+Application $\ast$}]{app,  }\item[{gpointer}]{user\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialize UI. 
+
+
+
+Definition at line 10 of file main.\+c.
+
+
+
+References main\+\_\+window\+\_\+new().
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+11 \{
+12     \mbox{\hyperlink{main__window_8h_adcf0e83db47ee039761c9b42887a6c6c}{main\_window\_new}}(app);
+13 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file main.\+c.
+
+
+
+References activate(), and http\+\_\+get().
+
+
+\begin{DoxyCode}
+15                                \{
+16     GtkApplication *app;
+17 
+18     \mbox{\hyperlink{http_8h_a38c946ac3ac1ac192d43cb6595fdf5c3}{http\_get}}(\textcolor{stringliteral}{"https://mrokita.pl/"});
+19     \textcolor{keywordtype}{int} status;
+20     app = gtk\_application\_new (\textcolor{stringliteral}{"pl.mrokita.pri3"}, G\_APPLICATION\_FLAGS\_NONE);
+21     g\_signal\_connect (app, \textcolor{stringliteral}{"activate"}, G\_CALLBACK (\mbox{\hyperlink{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a}{activate}}), NULL);
+22     status = g\_application\_run (G\_APPLICATION (app), argc, argv);
+23     g\_object\_unref (app);
+24 
+25     \textcolor{keywordflow}{return} status;
+26 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}

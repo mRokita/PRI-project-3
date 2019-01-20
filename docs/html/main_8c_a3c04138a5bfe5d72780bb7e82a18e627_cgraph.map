@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$main_8c.html#ac8d185b1db8b0153f14fd5cb4537cf2a" title="Initialize UI. " alt="" coords="109,5,183,32"/>
+<area shape="rect" id="node4" href="$http_8h.html#a38c946ac3ac1ac192d43cb6595fdf5c3" title="Gets HTTP response for url. " alt="" coords="108,56,184,83"/>
+<area shape="rect" id="node3" href="$main__window_8h.html#adcf0e83db47ee039761c9b42887a6c6c" title="main_window_new" alt="" coords="233,5,379,32"/>
+<area shape="rect" id="node5" href="$http_8c.html#a47626df99e751c22b12fc185e4d84d7d" title="http_response_new" alt="" coords="232,56,380,83"/>
+<area shape="rect" id="node6" href="$http_8c.html#a4c00439adfc2c266dfc3f138a4bab5bb" title="write_function" alt="" coords="249,107,363,133"/>
+</map>

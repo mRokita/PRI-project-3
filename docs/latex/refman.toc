@@ -1,0 +1,34 @@
+\contentsline {chapter}{\numberline {1}Data Structure Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Data Structures}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Data Structure Documentation}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Http\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response Struct Reference}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Field Documentation}{5}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}code}{6}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}data}{6}{subsubsection.3.1.2.2}
+\contentsline {subsubsection}{\numberline {3.1.2.3}size}{6}{subsubsection.3.1.2.3}
+\contentsline {chapter}{\numberline {4}File Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}include/main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}window.h File Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Function Documentation}{8}{subsection.4.1.1}
+\contentsline {subsubsection}{\numberline {4.1.1.1}main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}window\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}new()}{8}{subsubsection.4.1.1.1}
+\contentsline {section}{\numberline {4.2}include/services/http.h File Reference}{9}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Typedef Documentation}{9}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}Http\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Response}{9}{subsubsection.4.2.1.1}
+\contentsline {subsection}{\numberline {4.2.2}Function Documentation}{9}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}http\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}get()}{9}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}write\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}function()}{11}{subsubsection.4.2.2.2}
+\contentsline {section}{\numberline {4.3}src/main.c File Reference}{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Function Documentation}{12}{subsection.4.3.1}
+\contentsline {subsubsection}{\numberline {4.3.1.1}activate()}{12}{subsubsection.4.3.1.1}
+\contentsline {subsubsection}{\numberline {4.3.1.2}main()}{13}{subsubsection.4.3.1.2}
+\contentsline {section}{\numberline {4.4}src/main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}window.c File Reference}{13}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Function Documentation}{14}{subsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.1.1}main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}window\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}new()}{14}{subsubsection.4.4.1.1}
+\contentsline {section}{\numberline {4.5}src/services/http.c File Reference}{15}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Function Documentation}{16}{subsection.4.5.1}
+\contentsline {subsubsection}{\numberline {4.5.1.1}http\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}get()}{16}{subsubsection.4.5.1.1}
+\contentsline {subsubsection}{\numberline {4.5.1.2}http\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}response\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}new()}{17}{subsubsection.4.5.1.2}
+\contentsline {subsubsection}{\numberline {4.5.1.3}write\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}function()}{18}{subsubsection.4.5.1.3}
+\contentsline {chapter}{Index}{19}{section*.29}
