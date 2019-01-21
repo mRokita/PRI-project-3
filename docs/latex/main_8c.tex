@@ -34,7 +34,7 @@ Initialize UI.
 
 
 
-Definition at line 10 of file main.\+c.
+Definition at line 27 of file main.\+c.
 
 
 
@@ -46,16 +46,16 @@ Referenced by main().
 
 
 \begin{DoxyCode}
-11 \{
-12     \mbox{\hyperlink{main__window_8h_adcf0e83db47ee039761c9b42887a6c6c}{main\_window\_new}}(app);
-13 \}
+28 \{
+29     gtk\_widget\_show\_all (\mbox{\hyperlink{main__window_8h_adcf0e83db47ee039761c9b42887a6c6c}{main\_window\_new}}(app));
+30 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=282pt]{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a_cgraph}
+\includegraphics[width=350pt]{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:
@@ -74,26 +74,26 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 15 of file main.\+c.
+Definition at line 33 of file main.\+c.
 
 
 
-References activate(), and http\+\_\+get().
+References activate().
 
 
 \begin{DoxyCode}
-15                                \{
-16     GtkApplication *app;
-17 
-18     \mbox{\hyperlink{http_8h_a38c946ac3ac1ac192d43cb6595fdf5c3}{http\_get}}(\textcolor{stringliteral}{"https://mrokita.pl/"});
-19     \textcolor{keywordtype}{int} status;
-20     app = gtk\_application\_new (\textcolor{stringliteral}{"pl.mrokita.pri3"}, G\_APPLICATION\_FLAGS\_NONE);
-21     g\_signal\_connect (app, \textcolor{stringliteral}{"activate"}, G\_CALLBACK (\mbox{\hyperlink{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a}{activate}}), NULL);
-22     status = g\_application\_run (G\_APPLICATION (app), argc, argv);
-23     g\_object\_unref (app);
-24 
-25     \textcolor{keywordflow}{return} status;
-26 \}
+33                                \{
+34     GtkApplication *app;
+35 
+36     \textcolor{keywordtype}{int} status;
+37 
+38     app = gtk\_application\_new (\textcolor{stringliteral}{"pl.mrokita.pri-proj-3"}, G\_APPLICATION\_FLAGS\_NONE);
+39     g\_signal\_connect (app, \textcolor{stringliteral}{"activate"}, G\_CALLBACK (\mbox{\hyperlink{main_8c_ac8d185b1db8b0153f14fd5cb4537cf2a}{activate}}), NULL);
+40     status = g\_application\_run (G\_APPLICATION (app), argc, argv);
+41     g\_object\_unref (app);
+42 
+43     \textcolor{keywordflow}{return} status;
+44 \}
 \end{DoxyCode}
 Here is the call graph for this function\+:
 \nopagebreak

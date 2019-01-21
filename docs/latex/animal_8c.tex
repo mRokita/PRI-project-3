@@ -1,0 +1,274 @@
+\hypertarget{animal_8c}{}\section{src/data/animal.c File Reference}
+\label{animal_8c}\index{src/data/animal.\+c@{src/data/animal.\+c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../../include/data/animal.\+h\char`\"{}}\newline
+Include dependency graph for animal.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{animal_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_animal_linked_list_item}{Animal\+Linked\+List\+Item}} $\ast$ \mbox{\hyperlink{animal_8c_ae0350c1cc5503e6fbc4b81ab642ad164}{animal\+\_\+linked\+\_\+list\+\_\+item\+\_\+new}} (\mbox{\hyperlink{struct_animal}{Animal}} $\ast$value)
+\item 
+\mbox{\hyperlink{struct_animal}{Animal}} $\ast$ \mbox{\hyperlink{animal_8c_af6d6189ffd7e3fb411e0c2e7386b5103}{animal\+\_\+new}} (int id, char $\ast$name, char $\ast$species, int age, char $\ast$comment)
+\item 
+\mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$ \mbox{\hyperlink{animal_8c_a5d57c899f6584a225dda3cacc771a1b7}{animal\+\_\+linked\+\_\+list\+\_\+new}} ()
+\item 
+void \mbox{\hyperlink{animal_8c_a27f4c15c2d3176ea1ccea0b652f53a21}{animal\+\_\+linked\+\_\+list\+\_\+sort}} (\mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$list, int($\ast$\mbox{\hyperlink{main__window_8c_a2e261ff6f544c95d8ea3adab66a4252d}{cmp}})(\mbox{\hyperlink{struct_animal}{Animal}} $\ast$a, \mbox{\hyperlink{struct_animal}{Animal}} $\ast$b))
+\item 
+void \mbox{\hyperlink{animal_8c_a56aa81831577f1bc41977c699e832363}{animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item}} (\mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$list, \mbox{\hyperlink{struct_animal}{Animal}} $\ast$value)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{animal_8c_a56aa81831577f1bc41977c699e832363}\label{animal_8c_a56aa81831577f1bc41977c699e832363}} 
+\index{animal.\+c@{animal.\+c}!animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item@{animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item}}
+\index{animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item@{animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item}!animal.\+c@{animal.\+c}}
+\subsubsection{\texorpdfstring{animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item()}{animal\_linked\_list\_add\_item()}}
+{\footnotesize\ttfamily void animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$}]{list,  }\item[{\mbox{\hyperlink{struct_animal}{Animal}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 93 of file animal.\+c.
+
+
+
+References animal\+\_\+linked\+\_\+list\+\_\+item\+\_\+new(), Animal\+Linked\+List\+::first\+Item, Animal\+Linked\+List\+::last\+Item, Animal\+Linked\+List\+Item\+::next, Animal\+Linked\+List\+Item\+::prev, and Animal\+Linked\+List\+::size.
+
+
+
+Referenced by main\+\_\+window\+\_\+new().
+
+
+\begin{DoxyCode}
+93                                                                   \{
+94 
+95     \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* cur = list->\mbox{\hyperlink{struct_animal_linked_list_a3a2756757903e7f1a69336bc78cc877a}{firstItem}};
+96     \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* toAdd = 
+      \mbox{\hyperlink{animal_8c_ae0350c1cc5503e6fbc4b81ab642ad164}{animal\_linked\_list\_item\_new}}(value);
+97 
+98     \textcolor{keywordflow}{if}(list->\mbox{\hyperlink{struct_animal_linked_list_a28ace4cc471481a60e6a9bb41c9de892}{size}} == 0)\{
+99         list->\mbox{\hyperlink{struct_animal_linked_list_a3a2756757903e7f1a69336bc78cc877a}{firstItem}} = toAdd;
+100         list->\mbox{\hyperlink{struct_animal_linked_list_a2bf1bc2b9c4f3d125f61839f4c191def}{lastItem}} = toAdd;
+101         list->\mbox{\hyperlink{struct_animal_linked_list_a28ace4cc471481a60e6a9bb41c9de892}{size}} ++;
+102         \textcolor{keywordflow}{return};
+103     \}
+104     \textcolor{keywordtype}{int} i;
+105     \textcolor{keywordflow}{for}(i=0; i<list->\mbox{\hyperlink{struct_animal_linked_list_a28ace4cc471481a60e6a9bb41c9de892}{size}}-1; ++i)\{
+106         cur = cur->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}};
+107     \}
+108 
+109     cur->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}} = toAdd;
+110     list->\mbox{\hyperlink{struct_animal_linked_list_a2bf1bc2b9c4f3d125f61839f4c191def}{lastItem}} = toAdd;
+111     toAdd->\mbox{\hyperlink{struct_animal_linked_list_item_ae9af6eb05ab6a7b59e2ad01ded9873bd}{prev}} = cur;
+112 
+113     list->\mbox{\hyperlink{struct_animal_linked_list_a28ace4cc471481a60e6a9bb41c9de892}{size}} ++;
+114 \};
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{animal_8c_a56aa81831577f1bc41977c699e832363_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{animal_8c_a56aa81831577f1bc41977c699e832363_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{animal_8c_ae0350c1cc5503e6fbc4b81ab642ad164}\label{animal_8c_ae0350c1cc5503e6fbc4b81ab642ad164}} 
+\index{animal.\+c@{animal.\+c}!animal\+\_\+linked\+\_\+list\+\_\+item\+\_\+new@{animal\+\_\+linked\+\_\+list\+\_\+item\+\_\+new}}
+\index{animal\+\_\+linked\+\_\+list\+\_\+item\+\_\+new@{animal\+\_\+linked\+\_\+list\+\_\+item\+\_\+new}!animal.\+c@{animal.\+c}}
+\subsubsection{\texorpdfstring{animal\+\_\+linked\+\_\+list\+\_\+item\+\_\+new()}{animal\_linked\_list\_item\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_animal_linked_list_item}{Animal\+Linked\+List\+Item}}$\ast$ animal\+\_\+linked\+\_\+list\+\_\+item\+\_\+new (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_animal}{Animal}} $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file animal.\+c.
+
+
+
+References Animal\+Linked\+List\+Item\+::value.
+
+
+
+Referenced by animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item().
+
+
+\begin{DoxyCode}
+25                                           \{
+26     \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* item = malloc(\textcolor{keyword}{sizeof}(
+      \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}));
+27     item->\mbox{\hyperlink{struct_animal_linked_list_item_a6beaaaa5100f3f9f3cb09b5746208047}{value}} = value;
+28     \textcolor{keywordflow}{return} item;
+29 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{animal_8c_ae0350c1cc5503e6fbc4b81ab642ad164_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{animal_8c_a5d57c899f6584a225dda3cacc771a1b7}\label{animal_8c_a5d57c899f6584a225dda3cacc771a1b7}} 
+\index{animal.\+c@{animal.\+c}!animal\+\_\+linked\+\_\+list\+\_\+new@{animal\+\_\+linked\+\_\+list\+\_\+new}}
+\index{animal\+\_\+linked\+\_\+list\+\_\+new@{animal\+\_\+linked\+\_\+list\+\_\+new}!animal.\+c@{animal.\+c}}
+\subsubsection{\texorpdfstring{animal\+\_\+linked\+\_\+list\+\_\+new()}{animal\_linked\_list\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}}$\ast$ animal\+\_\+linked\+\_\+list\+\_\+new (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 48 of file animal.\+c.
+
+
+
+References Animal\+Linked\+List\+::size.
+
+
+
+Referenced by main\+\_\+window\+\_\+new().
+
+
+\begin{DoxyCode}
+48                         \{
+49     \mbox{\hyperlink{struct_animal_linked_list}{AnimalLinkedList}}* list = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_animal_linked_list}{AnimalLinkedList}}));
+50     list->\mbox{\hyperlink{struct_animal_linked_list_a28ace4cc471481a60e6a9bb41c9de892}{size}} = 0;
+51     \textcolor{keywordflow}{return} list;
+52 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{animal_8c_a5d57c899f6584a225dda3cacc771a1b7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{animal_8c_a27f4c15c2d3176ea1ccea0b652f53a21}\label{animal_8c_a27f4c15c2d3176ea1ccea0b652f53a21}} 
+\index{animal.\+c@{animal.\+c}!animal\+\_\+linked\+\_\+list\+\_\+sort@{animal\+\_\+linked\+\_\+list\+\_\+sort}}
+\index{animal\+\_\+linked\+\_\+list\+\_\+sort@{animal\+\_\+linked\+\_\+list\+\_\+sort}!animal.\+c@{animal.\+c}}
+\subsubsection{\texorpdfstring{animal\+\_\+linked\+\_\+list\+\_\+sort()}{animal\_linked\_list\_sort()}}
+{\footnotesize\ttfamily void animal\+\_\+linked\+\_\+list\+\_\+sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$}]{list,  }\item[{int($\ast$)(\mbox{\hyperlink{struct_animal}{Animal}} $\ast$a, \mbox{\hyperlink{struct_animal}{Animal}} $\ast$b)}]{cmp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file animal.\+c.
+
+
+
+References cmp(), Animal\+Linked\+List\+::first\+Item, Animal\+Linked\+List\+::last\+Item, Animal\+Linked\+List\+Item\+::next, Animal\+Linked\+List\+Item\+::prev, Animal\+Linked\+List\+::size, and Animal\+Linked\+List\+Item\+::value.
+
+
+
+Referenced by callback\+\_\+sort\+\_\+click().
+
+
+\begin{DoxyCode}
+57 \{
+58     \textcolor{keywordtype}{int} changed = 1;
+59     \textcolor{keywordflow}{while}(changed)\{
+60         changed = 0;
+61         \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* cur = list->\mbox{\hyperlink{struct_animal_linked_list_a3a2756757903e7f1a69336bc78cc877a}{firstItem}};
+62         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<list->\mbox{\hyperlink{struct_animal_linked_list_a28ace4cc471481a60e6a9bb41c9de892}{size}}-1; ++i)\{
+63             \textcolor{keywordflow}{if}((*\mbox{\hyperlink{main__window_8c_a2e261ff6f544c95d8ea3adab66a4252d}{cmp}})(cur->\mbox{\hyperlink{struct_animal_linked_list_item_a6beaaaa5100f3f9f3cb09b5746208047}{value}}, cur->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}}->\mbox{\hyperlink{struct_animal_linked_list_item_a6beaaaa5100f3f9f3cb09b5746208047}{value}}))\{
+64                 changed = 1;
+65                 \textcolor{keywordtype}{int} has\_prev = list->\mbox{\hyperlink{struct_animal_linked_list_a3a2756757903e7f1a69336bc78cc877a}{firstItem}} != cur;
+66                 \textcolor{keywordtype}{int} has\_next = list->\mbox{\hyperlink{struct_animal_linked_list_a2bf1bc2b9c4f3d125f61839f4c191def}{lastItem}} != cur->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}};
+67                 \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* node\_0 = has\_prev ? cur->
+      \mbox{\hyperlink{struct_animal_linked_list_item_ae9af6eb05ab6a7b59e2ad01ded9873bd}{prev}} : NULL;
+68                 \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* node\_1 = cur;
+69                 \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* node\_2 = cur->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}};
+70                 \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* node\_3 = has\_next ? cur->
+      \mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}}->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}} : NULL;
+71                 node\_1->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}} = node\_2->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}};
+72                 node\_1->\mbox{\hyperlink{struct_animal_linked_list_item_ae9af6eb05ab6a7b59e2ad01ded9873bd}{prev}} = node\_2;
+73                 node\_2->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}} = node\_1;
+74                 node\_2->\mbox{\hyperlink{struct_animal_linked_list_item_ae9af6eb05ab6a7b59e2ad01ded9873bd}{prev}} = node\_0;
+75                 \textcolor{keywordflow}{if}(has\_prev)\{
+76                     node\_0->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}} = node\_2;
+77                 \} \textcolor{keywordflow}{else} \{
+78                     list->\mbox{\hyperlink{struct_animal_linked_list_a3a2756757903e7f1a69336bc78cc877a}{firstItem}} = node\_2;
+79                 \}
+80                 \textcolor{keywordflow}{if}(has\_next)\{
+81                     node\_3->\mbox{\hyperlink{struct_animal_linked_list_item_ae9af6eb05ab6a7b59e2ad01ded9873bd}{prev}} = node\_1;
+82                 \} \textcolor{keywordflow}{else} \{
+83                     list->\mbox{\hyperlink{struct_animal_linked_list_a2bf1bc2b9c4f3d125f61839f4c191def}{lastItem}} = node\_1;
+84                 \}
+85                 cur = node\_2;
+86             \}
+87             cur = cur->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}};
+88         \}
+89     \}
+90 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{animal_8c_a27f4c15c2d3176ea1ccea0b652f53a21_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{animal_8c_a27f4c15c2d3176ea1ccea0b652f53a21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{animal_8c_af6d6189ffd7e3fb411e0c2e7386b5103}\label{animal_8c_af6d6189ffd7e3fb411e0c2e7386b5103}} 
+\index{animal.\+c@{animal.\+c}!animal\+\_\+new@{animal\+\_\+new}}
+\index{animal\+\_\+new@{animal\+\_\+new}!animal.\+c@{animal.\+c}}
+\subsubsection{\texorpdfstring{animal\+\_\+new()}{animal\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_animal}{Animal}}$\ast$ animal\+\_\+new (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{char $\ast$}]{name,  }\item[{char $\ast$}]{species,  }\item[{int}]{age,  }\item[{char $\ast$}]{comment }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file animal.\+c.
+
+
+
+References Animal\+::age, Animal\+::comment, Animal\+::id, Animal\+::name, and Animal\+::species.
+
+
+
+Referenced by main\+\_\+window\+\_\+new().
+
+
+\begin{DoxyCode}
+33                                                                      \{
+34     \mbox{\hyperlink{struct_animal}{Animal}}* animal = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_animal}{Animal}}));
+35     animal->\mbox{\hyperlink{struct_animal_a0e1e797aa638af5d8276bcf12fad9a1f}{id}} = id;
+36     animal->\mbox{\hyperlink{struct_animal_a0b50566cb6e016fad6b40b4feaf67b1e}{name}} = malloc(strlen(name)+1);
+37     strcpy(animal->\mbox{\hyperlink{struct_animal_a0b50566cb6e016fad6b40b4feaf67b1e}{name}}, name);
+38     animal->\mbox{\hyperlink{struct_animal_a64f20dd8929ab24362896fc4bdd5bc6d}{species}} = malloc(strlen(species)+1);
+39     strcpy(animal->\mbox{\hyperlink{struct_animal_a64f20dd8929ab24362896fc4bdd5bc6d}{species}}, species);
+40 
+41     animal->\mbox{\hyperlink{struct_animal_a31e4a23bef9596927496de4eb6b9c721}{age}} = age;
+42     animal->\mbox{\hyperlink{struct_animal_a6e65a2d3d4dff6a58459fc211e5470c4}{comment}} = malloc(strlen(comment)+1);
+43     strcpy(animal->\mbox{\hyperlink{struct_animal_a6e65a2d3d4dff6a58459fc211e5470c4}{comment}}, comment);
+44     \textcolor{keywordflow}{return} animal;
+45 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{animal_8c_af6d6189ffd7e3fb411e0c2e7386b5103_icgraph}
+\end{center}
+\end{figure}

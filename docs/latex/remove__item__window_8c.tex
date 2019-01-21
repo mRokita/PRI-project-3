@@ -1,0 +1,59 @@
+\hypertarget{remove__item__window_8c}{}\section{src/remove\+\_\+item\+\_\+window.c File Reference}
+\label{remove__item__window_8c}\index{src/remove\+\_\+item\+\_\+window.\+c@{src/remove\+\_\+item\+\_\+window.\+c}}
+{\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
+Include dependency graph for remove\+\_\+item\+\_\+window.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{remove__item__window_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Gtk\+Widget $\ast$ \mbox{\hyperlink{remove__item__window_8c_aabe0dfad97ea8afb43c870652ecf4d4c}{remove\+\_\+item\+\_\+window\+\_\+new}} (Gtk\+Application $\ast$app)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{remove__item__window_8c_aabe0dfad97ea8afb43c870652ecf4d4c}\label{remove__item__window_8c_aabe0dfad97ea8afb43c870652ecf4d4c}} 
+\index{remove\+\_\+item\+\_\+window.\+c@{remove\+\_\+item\+\_\+window.\+c}!remove\+\_\+item\+\_\+window\+\_\+new@{remove\+\_\+item\+\_\+window\+\_\+new}}
+\index{remove\+\_\+item\+\_\+window\+\_\+new@{remove\+\_\+item\+\_\+window\+\_\+new}!remove\+\_\+item\+\_\+window.\+c@{remove\+\_\+item\+\_\+window.\+c}}
+\subsubsection{\texorpdfstring{remove\+\_\+item\+\_\+window\+\_\+new()}{remove\_item\_window\_new()}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ remove\+\_\+item\+\_\+window\+\_\+new (\begin{DoxyParamCaption}\item[{Gtk\+Application $\ast$}]{app }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file remove\+\_\+item\+\_\+window.\+c.
+
+
+
+Referenced by callback\+\_\+remove\+\_\+animal().
+
+
+\begin{DoxyCode}
+22                                            \{
+23     GtkWidget* window;
+24     GtkWidget* mainContainer;
+25     mainContainer = gtk\_grid\_new();
+26     window = gtk\_window\_new (GTK\_WINDOW\_TOPLEVEL);
+27     gtk\_container\_add(GTK\_CONTAINER(window), mainContainer);
+28     GtkEntry* entryId = gtk\_entry\_new();
+29     gtk\_entry\_set\_placeholder\_text(entryId, \textcolor{stringliteral}{"Id elementu"});
+30     gtk\_grid\_attach(GTK\_GRID(mainContainer), entryId, 0, 0, 1, 1);
+31     gtk\_widget\_set\_hexpand(entryId, 1);
+32     gtk\_widget\_set\_vexpand(entryId, 1);
+33     gtk\_window\_set\_title (GTK\_WINDOW (window), \textcolor{stringliteral}{"Usuwanie elementu"});
+34 
+35     \textcolor{keywordflow}{return} window;
+36 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{remove__item__window_8c_aabe0dfad97ea8afb43c870652ecf4d4c_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,7 @@
+<map id="remove_item_window_new" name="remove_item_window_new">
+<area shape="rect" id="node2" href="$main__window_8c.html#a73098b68d1fdd2d1b91694241eb116cb" title="callback_remove_animal" alt="" coords="253,5,439,32"/>
+<area shape="rect" id="node3" href="$main__window_8c.html#acb8a7744ef425d1083a95017a3eaf1d7" title="add_control_buttons" alt="" coords="487,5,641,32"/>
+<area shape="rect" id="node4" href="$main__window_8c.html#adcf0e83db47ee039761c9b42887a6c6c" title="Initialize the main window. " alt="" coords="689,5,836,32"/>
+<area shape="rect" id="node5" href="$main_8c.html#ac8d185b1db8b0153f14fd5cb4537cf2a" title="Initialize UI. " alt="" coords="884,5,959,32"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1007,5,1061,32"/>
+</map>

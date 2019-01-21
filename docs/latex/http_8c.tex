@@ -5,8 +5,7 @@
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}../../include/services/http.\+h\char`\"{}}\newline
-Include dependency graph for http.\+c\+:
-\nopagebreak
+Include dependency graph for http.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -45,61 +44,48 @@ Filled \mbox{\hyperlink{struct_http_response}{Http\+Response}}
 \end{DoxyReturn}
 
 
-Definition at line 33 of file http.\+c.
+Definition at line 46 of file http.\+c.
 
 
 
 References Http\+Response\+::code, Http\+Response\+::data, http\+\_\+response\+\_\+new(), and write\+\_\+function().
 
 
-
-Referenced by main().
-
-
 \begin{DoxyCode}
-33                                    \{
-34     CURL *curl;
-35     \mbox{\hyperlink{struct_http_response}{HttpResponse}} * res = \mbox{\hyperlink{http_8c_a47626df99e751c22b12fc185e4d84d7d}{http\_response\_new}}();
-36 
-37     curl = curl\_easy\_init();
-38     \textcolor{keywordflow}{if}(curl) \{
-39         puts(url);
-40         curl\_easy\_setopt(curl, CURLOPT\_URL, url);
-41         \textcolor{comment}{/* example.com is redirected, so we tell libcurl to follow redirection */}
-42         curl\_easy\_setopt(curl, CURLOPT\_FOLLOWLOCATION, 1L);
-43         curl\_easy\_setopt(curl, CURLOPT\_WRITEFUNCTION, \mbox{\hyperlink{http_8c_a4c00439adfc2c266dfc3f138a4bab5bb}{write\_function}});
-44         curl\_easy\_setopt(curl, CURLOPT\_WRITEDATA, res);
-45 
-46         \textcolor{comment}{/* Perform the request, res will get the return code */}
-47         res->\mbox{\hyperlink{struct_http_response_abce68ae6776a536dce762f0b6a96ab54}{code}} = curl\_easy\_perform(curl);
-48         \textcolor{comment}{/* Check for errors */}
-49         \textcolor{keywordflow}{if}(res->\mbox{\hyperlink{struct_http_response_abce68ae6776a536dce762f0b6a96ab54}{code}} != CURLE\_OK)
-50             fprintf(stderr, \textcolor{stringliteral}{"curl\_easy\_perform() failed: %s\(\backslash\)n"},
-51                     curl\_easy\_strerror(res->\mbox{\hyperlink{struct_http_response_abce68ae6776a536dce762f0b6a96ab54}{code}}));
-52         \textcolor{keywordflow}{else} \{
-53             printf(\textcolor{stringliteral}{"Data: %s\(\backslash\)n"}, res->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}});
-54         \}
-55 
-56         \textcolor{comment}{/* always cleanup */}
-57         curl\_easy\_cleanup(curl);
-58     \}
-59     \textcolor{keywordflow}{return} res;
-60 \}
+46                                    \{
+47     CURL *curl;
+48     \mbox{\hyperlink{struct_http_response}{HttpResponse}} * res = \mbox{\hyperlink{http_8c_a47626df99e751c22b12fc185e4d84d7d}{http\_response\_new}}();
+49 
+50     curl = curl\_easy\_init();
+51     \textcolor{keywordflow}{if}(curl) \{
+52         curl\_easy\_setopt(curl, CURLOPT\_URL, url);
+53         \textcolor{comment}{/* example.com is redirected, so we tell libcurl to follow redirection */}
+54         curl\_easy\_setopt(curl, CURLOPT\_FOLLOWLOCATION, 1L);
+55         curl\_easy\_setopt(curl, CURLOPT\_WRITEFUNCTION, \mbox{\hyperlink{http_8c_a4c00439adfc2c266dfc3f138a4bab5bb}{write\_function}});
+56         curl\_easy\_setopt(curl, CURLOPT\_WRITEDATA, res);
+57 
+58         \textcolor{comment}{/* Perform the request, res->code will get the return code */}
+59         res->\mbox{\hyperlink{struct_http_response_abce68ae6776a536dce762f0b6a96ab54}{code}} = curl\_easy\_perform(curl);
+60         \textcolor{comment}{/* Check for errors */}
+61         \textcolor{keywordflow}{if}(res->\mbox{\hyperlink{struct_http_response_abce68ae6776a536dce762f0b6a96ab54}{code}} != CURLE\_OK)
+62             fprintf(stderr, \textcolor{stringliteral}{"curl\_easy\_perform() failed: %s\(\backslash\)n"},
+63                     curl\_easy\_strerror(res->\mbox{\hyperlink{struct_http_response_abce68ae6776a536dce762f0b6a96ab54}{code}}));
+64         \textcolor{keywordflow}{else} \{
+65             \textcolor{comment}{/* Print data for debug */}
+66             printf(\textcolor{stringliteral}{"Data: %s\(\backslash\)n"}, res->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}});
+67         \}
+68 
+69         \textcolor{comment}{/* Cleanup */}
+70         curl\_easy\_cleanup(curl);
+71     \}
+72     \textcolor{keywordflow}{return} res;
+73 \}
 \end{DoxyCode}
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=284pt]{http_8c_a38c946ac3ac1ac192d43cb6595fdf5c3_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=214pt]{http_8c_a38c946ac3ac1ac192d43cb6595fdf5c3_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{http_8c_a47626df99e751c22b12fc185e4d84d7d}\label{http_8c_a47626df99e751c22b12fc185e4d84d7d}} 
@@ -110,7 +96,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 20 of file http.\+c.
+Definition at line 33 of file http.\+c.
 
 
 
@@ -122,20 +108,20 @@ Referenced by http\+\_\+get().
 
 
 \begin{DoxyCode}
-20                                   \{
-21     \mbox{\hyperlink{struct_http_response}{HttpResponse}} * res = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_http_response}{HttpResponse}}));
-22     res->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}} = 0;
-23     res->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}} = malloc(res->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}}+1);
-24     res->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}[res->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}}] = \textcolor{charliteral}{'\(\backslash\)0'};
-25     \textcolor{keywordflow}{return} res;
-26 \};
+33                                   \{
+34     \mbox{\hyperlink{struct_http_response}{HttpResponse}} * res = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_http_response}{HttpResponse}}));
+35     res->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}} = 0;
+36     res->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}} = malloc(res->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}}+1);
+37     res->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}[res->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}}] = \textcolor{charliteral}{'\(\backslash\)0'};
+38     \textcolor{keywordflow}{return} res;
+39 \};
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{http_8c_a47626df99e751c22b12fc185e4d84d7d_icgraph}
+\includegraphics[width=284pt]{http_8c_a47626df99e751c22b12fc185e4d84d7d_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{http_8c_a4c00439adfc2c266dfc3f138a4bab5bb}\label{http_8c_a4c00439adfc2c266dfc3f138a4bab5bb}} 
@@ -146,7 +132,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 12 of file http.\+c.
+Definition at line 25 of file http.\+c.
 
 
 
@@ -158,19 +144,19 @@ Referenced by http\+\_\+get().
 
 
 \begin{DoxyCode}
-12                                                                             \{
-13     \textcolor{keywordtype}{size\_t} new\_len = r->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}} + size*nmemb;
-14     r->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}= realloc(r->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}, new\_len+1);
-15     memcpy(r->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}+r->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}}, ptr, size*nmemb);
-16     r->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}[new\_len] = \textcolor{charliteral}{'\(\backslash\)0'};
-17     \textcolor{keywordflow}{return} size*nmemb;
-18 \}
+25                                                                             \{
+26     \textcolor{keywordtype}{size\_t} new\_len = r->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}} + size*nmemb;
+27     r->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}= realloc(r->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}, new\_len+1);
+28     memcpy(r->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}+r->\mbox{\hyperlink{struct_http_response_a11b910682b365528a15fcfd6d4dd824f}{size}}, ptr, size*nmemb);
+29     r->\mbox{\hyperlink{struct_http_response_a29b7ecfb11da1af6c7fdd3fe7862901f}{data}}[new\_len] = \textcolor{charliteral}{'\(\backslash\)0'};
+30     \textcolor{keywordflow}{return} size*nmemb;
+31 \}
 \end{DoxyCode}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=336pt]{http_8c_a4c00439adfc2c266dfc3f138a4bab5bb_icgraph}
+\includegraphics[width=259pt]{http_8c_a4c00439adfc2c266dfc3f138a4bab5bb_icgraph}
 \end{center}
 \end{figure}

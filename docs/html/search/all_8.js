@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['stringify',['STRINGIFY',['../_c_make_c_compiler_id_8c.html#a43e1cad902b6477bec893cb6430bd6c8',1,'CMakeCCompilerId.c']]],
-  ['stringify_5fhelper',['STRINGIFY_HELPER',['../_c_make_c_compiler_id_8c.html#a2ae9b72bb13abaabfcf2ee0ba7d3fa1d',1,'CMakeCCompilerId.c']]]
+  ['name',['name',['../struct_animal.html#a0b50566cb6e016fad6b40b4feaf67b1e',1,'Animal::name()'],['../main__window_8h.html#a727e9b9696032b380d0072840595ef05a67bc2ced260a8e43805d2480a785d312',1,'NAME():&#160;main_window.h']]],
+  ['next',['next',['../struct_animal_linked_list_item.html#a06cafc1028de611d48fcbe0ead6317ad',1,'AnimalLinkedListItem']]]
 ];

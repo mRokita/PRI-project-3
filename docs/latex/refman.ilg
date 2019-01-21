@@ -1,6 +1,27 @@
 This is makeindex, version 2.15 [TeX Live 2016] (kpathsea + Thai support).
-Scanning input file refman.idx....done (32 entries accepted, 0 rejected).
-Sorting entries....done (186 comparisons).
-Generating output file refman.ind....done (71 lines written, 0 warnings).
+Scanning input file refman.idx....
+!! Input index error (file = refman.idx, line = 96):
+   -- Extra `@' at position 158 of first argument.
+!! Input index error (file = refman.idx, line = 97):
+   -- Extra `@' at position 150 of first argument.
+!! Input index error (file = refman.idx, line = 98):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 99):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 100):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 101):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 102):
+   -- Extra `@' at position 117 of first argument.
+!! Input index error (file = refman.idx, line = 103):
+   -- Extra `@' at position 150 of first argument.
+!! Input index error (file = refman.idx, line = 104):
+   -- First argument too long (max 1024).
+!! Input index error (file = refman.idx, line = 105):
+   -- First argument too long (max 1024).
+done (165 entries accepted, 10 rejected).
+Sorting entries....done (1418 comparisons).
+Generating output file refman.ind....done (281 lines written, 0 warnings).
 Output written in refman.ind.
 Transcript written in refman.ilg.

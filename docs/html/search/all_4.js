@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['main',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]],
-  ['main_2ec',['main.c',['../main_8c.html',1,'']]],
-  ['main_5fwindow_2ec',['main_window.c',['../main__window_8c.html',1,'']]],
-  ['main_5fwindow_2eh',['main_window.h',['../main__window_8h.html',1,'']]],
-  ['main_5fwindow_5fnew',['main_window_new',['../main__window_8h.html#adcf0e83db47ee039761c9b42887a6c6c',1,'main_window_new(GtkApplication *app):&#160;main_window.c'],['../main__window_8c.html#adcf0e83db47ee039761c9b42887a6c6c',1,'main_window_new(GtkApplication *app):&#160;main_window.c']]]
+  ['hex',['HEX',['../_c_make_c_compiler_id_8c.html#a46d5d95daa1bef867bd0179594310ed5',1,'CMakeCCompilerId.c']]],
+  ['http_2ec',['http.c',['../http_8c.html',1,'']]],
+  ['http_2eh',['http.h',['../http_8h.html',1,'']]],
+  ['http_5fget',['http_get',['../http_8h.html#a38c946ac3ac1ac192d43cb6595fdf5c3',1,'http_get(char *url):&#160;http.c'],['../http_8c.html#a38c946ac3ac1ac192d43cb6595fdf5c3',1,'http_get(char *url):&#160;http.c']]],
+  ['http_5fresponse_5fnew',['http_response_new',['../http_8c.html#a47626df99e751c22b12fc185e4d84d7d',1,'http.c']]],
+  ['httpresponse',['HttpResponse',['../struct_http_response.html',1,'HttpResponse'],['../http_8h.html#a759eca53484c77acda459c191b9efa1f',1,'HttpResponse():&#160;http.h']]]
 ];

@@ -1,0 +1,8 @@
+<map id="add_table_headers" name="add_table_headers">
+<area shape="rect" id="node2" href="$main__window_8c.html#a14991586378d572e198ab90004e60e5d" title="callback_sort_click" alt="" coords="215,56,361,83"/>
+<area shape="rect" id="node7" href="$main__window_8c.html#a0d2178b065572d4806629a2efa02e1b8" title="sort_callback_data_new" alt="" coords="199,107,377,133"/>
+<area shape="rect" id="node3" href="$animal_8h.html#a27f4c15c2d3176ea1ccea0b652f53a21" title="animal_linked_list_sort" alt="" coords="425,5,599,32"/>
+<area shape="rect" id="node4" href="$main__window_8c.html#a2e261ff6f544c95d8ea3adab66a4252d" title="Animal comparator Used to sort the table. " alt="" coords="701,31,751,57"/>
+<area shape="rect" id="node5" href="$main__window_8c.html#a7cd8ebd9f8b95eb48255fa9217843ca7" title="fill_table" alt="" coords="473,107,551,133"/>
+<area shape="rect" id="node6" href="$main__window_8c.html#ab6218d4bd60fdaaf750c94cec25da675" title="add_animal_to_table" alt="" coords="647,107,805,133"/>
+</map>

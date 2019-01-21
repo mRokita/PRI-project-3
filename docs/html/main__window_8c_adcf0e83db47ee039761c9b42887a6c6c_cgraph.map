@@ -1,0 +1,16 @@
+<map id="main_window_new" name="main_window_new">
+<area shape="rect" id="node2" href="$main__window_8c.html#acb8a7744ef425d1083a95017a3eaf1d7" title="add_control_buttons" alt="" coords="210,31,365,57"/>
+<area shape="rect" id="node5" href="$main__window_8c.html#af1eaf0a9c2a7070f525386bb7ef4bac0" title="Add table header buttons. " alt="" coords="215,107,360,133"/>
+<area shape="rect" id="node9" href="$main__window_8c.html#a7cd8ebd9f8b95eb48255fa9217843ca7" title="fill_table" alt="" coords="717,157,795,184"/>
+<area shape="rect" id="node12" href="$animal_8h.html#a56aa81831577f1bc41977c699e832363" title="animal_linked_list\l_add_item" alt="" coords="217,209,358,250"/>
+<area shape="rect" id="node14" href="$animal_8h.html#a5d57c899f6584a225dda3cacc771a1b7" title="animal_linked_list_new" alt="" coords="200,275,375,301"/>
+<area shape="rect" id="node15" href="$animal_8h.html#af6d6189ffd7e3fb411e0c2e7386b5103" title="animal_new" alt="" coords="237,325,338,352"/>
+<area shape="rect" id="node3" href="$main__window_8c.html#a73098b68d1fdd2d1b91694241eb116cb" title="callback_remove_animal" alt="" coords="423,5,608,32"/>
+<area shape="rect" id="node4" href="$remove__item__window_8h.html#aabe0dfad97ea8afb43c870652ecf4d4c" title="remove_item_window_new" alt="" coords="656,5,856,32"/>
+<area shape="rect" id="node6" href="$main__window_8c.html#a14991586378d572e198ab90004e60e5d" title="callback_sort_click" alt="" coords="443,56,588,83"/>
+<area shape="rect" id="node11" href="$main__window_8c.html#a0d2178b065572d4806629a2efa02e1b8" title="sort_callback_data_new" alt="" coords="426,107,605,133"/>
+<area shape="rect" id="node7" href="$animal_8h.html#a27f4c15c2d3176ea1ccea0b652f53a21" title="animal_linked_list_sort" alt="" coords="669,56,843,83"/>
+<area shape="rect" id="node8" href="$main__window_8c.html#a2e261ff6f544c95d8ea3adab66a4252d" title="Animal comparator Used to sort the table. " alt="" coords="958,81,1009,108"/>
+<area shape="rect" id="node10" href="$main__window_8c.html#ab6218d4bd60fdaaf750c94cec25da675" title="add_animal_to_table" alt="" coords="904,157,1063,184"/>
+<area shape="rect" id="node13" href="$animal_8c.html#ae0350c1cc5503e6fbc4b81ab642ad164" title="animal_linked_list\l_item_new" alt="" coords="445,209,586,250"/>
+</map>

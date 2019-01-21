@@ -11,7 +11,13 @@ typedef struct HttpResponse {
     CURLcode code;
 } HttpResponse;
 
-size_t write_function(void *ptr, size_t size, size_t nmemb, HttpResponse *r);
+size_t
+write_function(void *ptr,
+               size_t size,
+               size_t nmemb,
+               HttpResponse *r);
 
-HttpResponse * http_get(char * url);
+HttpResponse*
+http_get(char * url);
+
 #endif //PRI3_HTTP_H

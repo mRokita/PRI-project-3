@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]],
-  ['main_5fwindow_5fnew',['main_window_new',['../main__window_8h.html#adcf0e83db47ee039761c9b42887a6c6c',1,'main_window_new(GtkApplication *app):&#160;main_window.c'],['../main__window_8c.html#adcf0e83db47ee039761c9b42887a6c6c',1,'main_window_new(GtkApplication *app):&#160;main_window.c']]]
+  ['fill_5ftable',['fill_table',['../main__window_8h.html#a7cd8ebd9f8b95eb48255fa9217843ca7',1,'fill_table(GtkWidget *table, AnimalLinkedList *animals):&#160;main_window.c'],['../main__window_8c.html#a7cd8ebd9f8b95eb48255fa9217843ca7',1,'fill_table(GtkWidget *table, AnimalLinkedList *animals):&#160;main_window.c']]]
 ];

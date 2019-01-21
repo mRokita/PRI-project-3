@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['code',['code',['../struct_http_response.html#abce68ae6776a536dce762f0b6a96ab54',1,'HttpResponse']]]
+  ['age',['age',['../struct_animal.html#a31e4a23bef9596927496de4eb6b9c721',1,'Animal']]]
 ];

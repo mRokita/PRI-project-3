@@ -1,12 +1,13 @@
 \hypertarget{main__window_8h}{}\section{include/main\+\_\+window.h File Reference}
 \label{main__window_8h}\index{include/main\+\_\+window.\+h@{include/main\+\_\+window.\+h}}
 {\ttfamily \#include $<$gtk/gtk.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}data/animal.\+h\char`\"{}}\newline
 Include dependency graph for main\+\_\+window.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=211pt]{main__window_8h__incl}
+\includegraphics[width=242pt]{main__window_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -17,14 +18,360 @@ This graph shows which files directly or indirectly include this file\+:
 \includegraphics[width=274pt]{main__window_8h__dep__incl}
 \end{center}
 \end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sort_callback_data}{Sort\+Callback\+Data}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05}{C\+O\+L\+U\+MN}} \mbox{\hyperlink{main__window_8h_a59f2ba426d7dcdfd9ade0a53aa7ee628}{C\+O\+L\+U\+MN}}
+\item 
+typedef struct \mbox{\hyperlink{struct_sort_callback_data}{Sort\+Callback\+Data}} \mbox{\hyperlink{main__window_8h_a96108b6df1df3189b7dd150e27a920db}{Sort\+Callback\+Data}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05}{C\+O\+L\+U\+MN}} \{ \newline
+\mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a001479a58fb44c39a29b20d565081a68}{ID}}, 
+\mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a67bc2ced260a8e43805d2480a785d312}{N\+A\+ME}}, 
+\mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a1663380252e067c51dd9ccc2b765691f}{S\+P\+E\+C\+I\+ES}}, 
+\mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a9fc6b2c465e5d1c9e839400fa1e1dfbc}{A\+GE}}, 
+\newline
+\mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05aae696377c19e507b64e16be78ce3bbdb}{C\+O\+M\+M\+E\+NT}}
+ \}
+\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 Gtk\+Widget $\ast$ \mbox{\hyperlink{main__window_8h_adcf0e83db47ee039761c9b42887a6c6c}{main\+\_\+window\+\_\+new}} (Gtk\+Application $\ast$app)
+\begin{DoxyCompactList}\small\item\em Initialize the main window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main__window_8h_a14991586378d572e198ab90004e60e5d}{callback\+\_\+sort\+\_\+click}} (Gtk\+Widget $\ast$widget, gpointer callback\+\_\+data)
+\item 
+void \mbox{\hyperlink{main__window_8h_af1eaf0a9c2a7070f525386bb7ef4bac0}{add\+\_\+table\+\_\+headers}} (Gtk\+Widget $\ast$main\+Container, Gtk\+Widget $\ast$table, \mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$animals)
+\begin{DoxyCompactList}\small\item\em Add table header buttons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main__window_8h_acb8a7744ef425d1083a95017a3eaf1d7}{add\+\_\+control\+\_\+buttons}} (Gtk\+Application $\ast$app, Gtk\+Widget $\ast$main\+Container)
+\item 
+void \mbox{\hyperlink{main__window_8h_a7cd8ebd9f8b95eb48255fa9217843ca7}{fill\+\_\+table}} (Gtk\+Widget $\ast$table, \mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$animals)
 \end{DoxyCompactItemize}
 
 
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{main__window_8h_a59f2ba426d7dcdfd9ade0a53aa7ee628}\label{main__window_8h_a59f2ba426d7dcdfd9ade0a53aa7ee628}} 
+\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!C\+O\+L\+U\+MN@{C\+O\+L\+U\+MN}}
+\index{C\+O\+L\+U\+MN@{C\+O\+L\+U\+MN}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+MN}{COLUMN}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05}{C\+O\+L\+U\+MN}}
+         \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05}{C\+O\+L\+U\+MN}}}
+
+\mbox{\Hypertarget{main__window_8h_a96108b6df1df3189b7dd150e27a920db}\label{main__window_8h_a96108b6df1df3189b7dd150e27a920db}} 
+\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!Sort\+Callback\+Data@{Sort\+Callback\+Data}}
+\index{Sort\+Callback\+Data@{Sort\+Callback\+Data}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}
+\subsubsection{\texorpdfstring{Sort\+Callback\+Data}{SortCallbackData}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_sort_callback_data}{Sort\+Callback\+Data}}  \mbox{\hyperlink{struct_sort_callback_data}{Sort\+Callback\+Data}}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{main__window_8h_a727e9b9696032b380d0072840595ef05}\label{main__window_8h_a727e9b9696032b380d0072840595ef05}} 
+\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!C\+O\+L\+U\+MN@{C\+O\+L\+U\+MN}}
+\index{C\+O\+L\+U\+MN@{C\+O\+L\+U\+MN}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+L\+U\+MN}{COLUMN}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05}{C\+O\+L\+U\+MN}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ID@{ID}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!ID@{ID}}}\mbox{\Hypertarget{main__window_8h_a727e9b9696032b380d0072840595ef05a001479a58fb44c39a29b20d565081a68}\label{main__window_8h_a727e9b9696032b380d0072840595ef05a001479a58fb44c39a29b20d565081a68}} 
+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+A\+ME@{N\+A\+ME}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!N\+A\+ME@{N\+A\+ME}}}\mbox{\Hypertarget{main__window_8h_a727e9b9696032b380d0072840595ef05a67bc2ced260a8e43805d2480a785d312}\label{main__window_8h_a727e9b9696032b380d0072840595ef05a67bc2ced260a8e43805d2480a785d312}} 
+N\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+P\+E\+C\+I\+ES@{S\+P\+E\+C\+I\+ES}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!S\+P\+E\+C\+I\+ES@{S\+P\+E\+C\+I\+ES}}}\mbox{\Hypertarget{main__window_8h_a727e9b9696032b380d0072840595ef05a1663380252e067c51dd9ccc2b765691f}\label{main__window_8h_a727e9b9696032b380d0072840595ef05a1663380252e067c51dd9ccc2b765691f}} 
+S\+P\+E\+C\+I\+ES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+GE@{A\+GE}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!A\+GE@{A\+GE}}}\mbox{\Hypertarget{main__window_8h_a727e9b9696032b380d0072840595ef05a9fc6b2c465e5d1c9e839400fa1e1dfbc}\label{main__window_8h_a727e9b9696032b380d0072840595ef05a9fc6b2c465e5d1c9e839400fa1e1dfbc}} 
+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C\+O\+M\+M\+E\+NT@{C\+O\+M\+M\+E\+NT}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!C\+O\+M\+M\+E\+NT@{C\+O\+M\+M\+E\+NT}}}\mbox{\Hypertarget{main__window_8h_a727e9b9696032b380d0072840595ef05aae696377c19e507b64e16be78ce3bbdb}\label{main__window_8h_a727e9b9696032b380d0072840595ef05aae696377c19e507b64e16be78ce3bbdb}} 
+C\+O\+M\+M\+E\+NT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 24 of file main\+\_\+window.\+h.
+
+
+\begin{DoxyCode}
+24                     \{\mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a001479a58fb44c39a29b20d565081a68}{ID}},
+25     \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a67bc2ced260a8e43805d2480a785d312}{NAME}},
+26     \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a1663380252e067c51dd9ccc2b765691f}{SPECIES}},
+27     \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a9fc6b2c465e5d1c9e839400fa1e1dfbc}{AGE}},
+28     \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05aae696377c19e507b64e16be78ce3bbdb}{COMMENT}}\}
+\end{DoxyCode}
+
+
 \subsection{Function Documentation}
+\mbox{\Hypertarget{main__window_8h_acb8a7744ef425d1083a95017a3eaf1d7}\label{main__window_8h_acb8a7744ef425d1083a95017a3eaf1d7}} 
+\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!add\+\_\+control\+\_\+buttons@{add\+\_\+control\+\_\+buttons}}
+\index{add\+\_\+control\+\_\+buttons@{add\+\_\+control\+\_\+buttons}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}
+\subsubsection{\texorpdfstring{add\+\_\+control\+\_\+buttons()}{add\_control\_buttons()}}
+{\footnotesize\ttfamily void add\+\_\+control\+\_\+buttons (\begin{DoxyParamCaption}\item[{Gtk\+Application $\ast$}]{app,  }\item[{Gtk\+Widget $\ast$}]{main\+Container }\end{DoxyParamCaption})}
+
+Add edit and delete buttons below the table 
+\begin{DoxyParams}{Parameters}
+{\em main\+Container} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file main\+\_\+window.\+c.
+
+
+
+References callback\+\_\+remove\+\_\+animal().
+
+
+
+Referenced by main\+\_\+window\+\_\+new().
+
+
+\begin{DoxyCode}
+99                          \{
+100     GtkWidget* buttonRemoveAnimal = gtk\_button\_new\_with\_label(\textcolor{stringliteral}{"Usuń element"});
+101     gtk\_widget\_set\_hexpand(buttonRemoveAnimal, 1);
+102     gtk\_grid\_attach(GTK\_GRID(mainContainer), buttonRemoveAnimal, 0, 2, 2, 1);
+103     g\_signal\_connect(G\_OBJECT(buttonRemoveAnimal), \textcolor{stringliteral}{"clicked"}, G\_CALLBACK(
+      \mbox{\hyperlink{main__window_8c_a73098b68d1fdd2d1b91694241eb116cb}{callback\_remove\_animal}}), (gpointer) app);
+104 
+105 
+106     GtkWidget* buttonAddAnimal = gtk\_button\_new\_with\_label(\textcolor{stringliteral}{"Dodaj element"});
+107     gtk\_widget\_set\_hexpand(buttonAddAnimal, 1);
+108     gtk\_widget\_set\_margin\_start(buttonAddAnimal, 5);
+109     gtk\_grid\_attach(GTK\_GRID(mainContainer), buttonAddAnimal, 2, 2, 3, 1);
+110 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8h_acb8a7744ef425d1083a95017a3eaf1d7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8h_acb8a7744ef425d1083a95017a3eaf1d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main__window_8h_af1eaf0a9c2a7070f525386bb7ef4bac0}\label{main__window_8h_af1eaf0a9c2a7070f525386bb7ef4bac0}} 
+\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!add\+\_\+table\+\_\+headers@{add\+\_\+table\+\_\+headers}}
+\index{add\+\_\+table\+\_\+headers@{add\+\_\+table\+\_\+headers}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}
+\subsubsection{\texorpdfstring{add\+\_\+table\+\_\+headers()}{add\_table\_headers()}}
+{\footnotesize\ttfamily void add\+\_\+table\+\_\+headers (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{main\+Container,  }\item[{Gtk\+Widget $\ast$}]{table,  }\item[{\mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$}]{animals }\end{DoxyParamCaption})}
+
+
+
+Add table header buttons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em main\+Container} & the main Gtk\+Grid of the window \\
+\hline
+{\em table} & table \\
+\hline
+{\em animals} & list of animals \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file main\+\_\+window.\+c.
+
+
+
+References A\+GE, callback\+\_\+sort\+\_\+click(), C\+O\+M\+M\+E\+NT, ID, N\+A\+ME, sort\+\_\+callback\+\_\+data\+\_\+new(), and S\+P\+E\+C\+I\+ES.
+
+
+
+Referenced by main\+\_\+window\+\_\+new().
+
+
+\begin{DoxyCode}
+150 \{
+151     GtkWidget *buttonId = gtk\_button\_new();
+152     gtk\_button\_set\_label(GTK\_BUTTON(buttonId), \textcolor{stringliteral}{"Id"});
+153     gtk\_widget\_set\_hexpand(buttonId, TRUE);
+154 
+155     g\_signal\_connect(G\_OBJECT(buttonId), \textcolor{stringliteral}{"clicked"}, G\_CALLBACK(
+      \mbox{\hyperlink{main__window_8c_a14991586378d572e198ab90004e60e5d}{callback\_sort\_click}}), (gpointer) \mbox{\hyperlink{main__window_8c_a0d2178b065572d4806629a2efa02e1b8}{sort\_callback\_data\_new}}(
+      \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a001479a58fb44c39a29b20d565081a68}{ID}}, animals, table));
+156     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (buttonId), 0, 0, 1, 1);
+157 
+158     GtkWidget *buttonName = gtk\_button\_new();
+159     gtk\_button\_set\_label(GTK\_BUTTON(buttonName), \textcolor{stringliteral}{"Imię"});
+160     gtk\_widget\_set\_hexpand(buttonName, TRUE);
+161     g\_signal\_connect(G\_OBJECT(buttonName), \textcolor{stringliteral}{"clicked"}, G\_CALLBACK(
+      \mbox{\hyperlink{main__window_8c_a14991586378d572e198ab90004e60e5d}{callback\_sort\_click}}), (gpointer) \mbox{\hyperlink{main__window_8c_a0d2178b065572d4806629a2efa02e1b8}{sort\_callback\_data\_new}}(
+      \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a67bc2ced260a8e43805d2480a785d312}{NAME}}, animals, table));
+162     gtk\_widget\_set\_margin\_start(buttonName, 5);
+163     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (buttonName), 1, 0, 1, 1);
+164 
+165     GtkWidget *buttonSpecies = gtk\_button\_new();
+166     gtk\_button\_set\_label(GTK\_BUTTON(buttonSpecies), \textcolor{stringliteral}{"Gatunek"});
+167     gtk\_widget\_set\_hexpand(buttonSpecies, TRUE);
+168     g\_signal\_connect(G\_OBJECT(buttonSpecies), \textcolor{stringliteral}{"clicked"}, G\_CALLBACK(
+      \mbox{\hyperlink{main__window_8c_a14991586378d572e198ab90004e60e5d}{callback\_sort\_click}}),
+169                      (gpointer) \mbox{\hyperlink{main__window_8c_a0d2178b065572d4806629a2efa02e1b8}{sort\_callback\_data\_new}}(
+      \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a1663380252e067c51dd9ccc2b765691f}{SPECIES}}, animals, table));
+170     gtk\_widget\_set\_margin\_start(buttonSpecies, 5);
+171     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (buttonSpecies), 2, 0, 1, 1);
+172 
+173     GtkWidget* buttonAge = gtk\_button\_new();
+174     gtk\_button\_set\_label(GTK\_BUTTON(buttonAge), \textcolor{stringliteral}{"Wiek"});
+175     gtk\_widget\_set\_hexpand(buttonAge, TRUE);
+176     g\_signal\_connect(G\_OBJECT(buttonAge), \textcolor{stringliteral}{"clicked"}, G\_CALLBACK(
+      \mbox{\hyperlink{main__window_8c_a14991586378d572e198ab90004e60e5d}{callback\_sort\_click}}),
+177                      (gpointer) \mbox{\hyperlink{main__window_8c_a0d2178b065572d4806629a2efa02e1b8}{sort\_callback\_data\_new}}(\mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05a9fc6b2c465e5d1c9e839400fa1e1dfbc}{AGE}}, animals, table));
+178     gtk\_widget\_set\_margin\_start(buttonAge, 5);
+179     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (buttonAge), 3, 0, 1, 1);
+180 
+181     GtkWidget* buttonComment = gtk\_button\_new();
+182     gtk\_button\_set\_label(GTK\_BUTTON(buttonComment), \textcolor{stringliteral}{"Komentarz"});
+183     gtk\_widget\_set\_hexpand(buttonComment, TRUE);
+184     g\_signal\_connect(G\_OBJECT(buttonComment), \textcolor{stringliteral}{"clicked"}, G\_CALLBACK(
+      \mbox{\hyperlink{main__window_8c_a14991586378d572e198ab90004e60e5d}{callback\_sort\_click}}),
+185                      (gpointer) \mbox{\hyperlink{main__window_8c_a0d2178b065572d4806629a2efa02e1b8}{sort\_callback\_data\_new}}(
+      \mbox{\hyperlink{main__window_8h_a727e9b9696032b380d0072840595ef05aae696377c19e507b64e16be78ce3bbdb}{COMMENT}}, animals, table));
+186     gtk\_widget\_set\_margin\_start(buttonComment, 5);
+187     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (buttonComment), 4, 0, 1, 1);
+188 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8h_af1eaf0a9c2a7070f525386bb7ef4bac0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8h_af1eaf0a9c2a7070f525386bb7ef4bac0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main__window_8h_a14991586378d572e198ab90004e60e5d}\label{main__window_8h_a14991586378d572e198ab90004e60e5d}} 
+\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!callback\+\_\+sort\+\_\+click@{callback\+\_\+sort\+\_\+click}}
+\index{callback\+\_\+sort\+\_\+click@{callback\+\_\+sort\+\_\+click}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}
+\subsubsection{\texorpdfstring{callback\+\_\+sort\+\_\+click()}{callback\_sort\_click()}}
+{\footnotesize\ttfamily void callback\+\_\+sort\+\_\+click (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{widget,  }\item[{gpointer}]{callback\+\_\+data }\end{DoxyParamCaption})}
+
+On click on any of the header buttons 
+\begin{DoxyParams}{Parameters}
+{\em widget} & \\
+\hline
+{\em callback\+\_\+data} & an instance of \mbox{\hyperlink{struct_sort_callback_data}{Sort\+Callback\+Data}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 197 of file main\+\_\+window.\+c.
+
+
+
+References animal\+\_\+linked\+\_\+list\+\_\+sort(), cmp(), Sort\+Callback\+Data\+::col, fill\+\_\+table(), Sort\+Callback\+Data\+::list, sort\+\_\+asc, sort\+\_\+by, and Sort\+Callback\+Data\+::table.
+
+
+
+Referenced by add\+\_\+table\+\_\+headers().
+
+
+\begin{DoxyCode}
+200 \{
+201     \mbox{\hyperlink{struct_sort_callback_data}{SortCallbackData}}* cd = (\mbox{\hyperlink{struct_sort_callback_data}{SortCallbackData}}*) callback\_data;
+202     \textcolor{keywordflow}{if}(\mbox{\hyperlink{main__window_8c_ae80c4a7f36242f763719ea198dbec6b3}{sort\_by}} == cd->\mbox{\hyperlink{struct_sort_callback_data_a0e28c35278440f85596b96930dcf7025}{col}}) \mbox{\hyperlink{main__window_8c_abe63683d34822ebdd1f134edbfafb292}{sort\_asc}} = !\mbox{\hyperlink{main__window_8c_abe63683d34822ebdd1f134edbfafb292}{sort\_asc}};
+203     \mbox{\hyperlink{main__window_8c_ae80c4a7f36242f763719ea198dbec6b3}{sort\_by}} = cd->\mbox{\hyperlink{struct_sort_callback_data_a0e28c35278440f85596b96930dcf7025}{col}};
+204     \mbox{\hyperlink{animal_8h_a27f4c15c2d3176ea1ccea0b652f53a21}{animal\_linked\_list\_sort}}(cd->\mbox{\hyperlink{struct_sort_callback_data_a7fb8d190af45cd79bcf2f1cf986d018b}{list}}, \mbox{\hyperlink{main__window_8c_a2e261ff6f544c95d8ea3adab66a4252d}{cmp}});
+205     \mbox{\hyperlink{main__window_8c_a7cd8ebd9f8b95eb48255fa9217843ca7}{fill\_table}}(cd->\mbox{\hyperlink{struct_sort_callback_data_a156725d482db7655e8817dc15865d191}{table}}, cd->\mbox{\hyperlink{struct_sort_callback_data_a7fb8d190af45cd79bcf2f1cf986d018b}{list}});
+206 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8h_a14991586378d572e198ab90004e60e5d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8h_a14991586378d572e198ab90004e60e5d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main__window_8h_a7cd8ebd9f8b95eb48255fa9217843ca7}\label{main__window_8h_a7cd8ebd9f8b95eb48255fa9217843ca7}} 
+\index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!fill\+\_\+table@{fill\+\_\+table}}
+\index{fill\+\_\+table@{fill\+\_\+table}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}
+\subsubsection{\texorpdfstring{fill\+\_\+table()}{fill\_table()}}
+{\footnotesize\ttfamily void fill\+\_\+table (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{table,  }\item[{\mbox{\hyperlink{struct_animal_linked_list}{Animal\+Linked\+List}} $\ast$}]{animals }\end{DoxyParamCaption})}
+
+
+
+Definition at line 264 of file main\+\_\+window.\+c.
+
+
+
+References add\+\_\+animal\+\_\+to\+\_\+table(), Animal\+Linked\+List\+::first\+Item, Animal\+Linked\+List\+Item\+::next, Animal\+Linked\+List\+::size, and Animal\+Linked\+List\+Item\+::value.
+
+
+
+Referenced by callback\+\_\+sort\+\_\+click(), and main\+\_\+window\+\_\+new().
+
+
+\begin{DoxyCode}
+266 \{
+267     GList *children, *iter;
+268 
+269     children = gtk\_container\_get\_children(GTK\_CONTAINER(table));
+270     \textcolor{keywordflow}{for}(iter = children; iter != NULL; iter = g\_list\_next(iter))
+271         gtk\_widget\_destroy(GTK\_WIDGET(iter->data));
+272     g\_list\_free(children);
+273 
+274     \mbox{\hyperlink{struct_animal_linked_list_item}{AnimalLinkedListItem}}* cur = animals->\mbox{\hyperlink{struct_animal_linked_list_a3a2756757903e7f1a69336bc78cc877a}{firstItem}};
+275     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<animals->\mbox{\hyperlink{struct_animal_linked_list_a28ace4cc471481a60e6a9bb41c9de892}{size}}; ++i)\{
+276         \mbox{\hyperlink{main__window_8c_ab6218d4bd60fdaaf750c94cec25da675}{add\_animal\_to\_table}}(table, cur->\mbox{\hyperlink{struct_animal_linked_list_item_a6beaaaa5100f3f9f3cb09b5746208047}{value}}, i+1);
+277         cur = cur->\mbox{\hyperlink{struct_animal_linked_list_item_a06cafc1028de611d48fcbe0ead6317ad}{next}};
+278     \}
+279 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{main__window_8h_a7cd8ebd9f8b95eb48255fa9217843ca7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8h_a7cd8ebd9f8b95eb48255fa9217843ca7_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main__window_8h_adcf0e83db47ee039761c9b42887a6c6c}\label{main__window_8h_adcf0e83db47ee039761c9b42887a6c6c}} 
 \index{main\+\_\+window.\+h@{main\+\_\+window.\+h}!main\+\_\+window\+\_\+new@{main\+\_\+window\+\_\+new}}
 \index{main\+\_\+window\+\_\+new@{main\+\_\+window\+\_\+new}!main\+\_\+window.\+h@{main\+\_\+window.\+h}}
@@ -33,7 +380,23 @@ Gtk\+Widget $\ast$ \mbox{\hyperlink{main__window_8h_adcf0e83db47ee039761c9b42887
 
 
 
-Definition at line 7 of file main\+\_\+window.\+c.
+Initialize the main window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em app} & Application \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+main window, not shown yet 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file main\+\_\+window.\+c.
+
+
+
+References add\+\_\+control\+\_\+buttons(), add\+\_\+table\+\_\+headers(), animal\+\_\+linked\+\_\+list\+\_\+add\+\_\+item(), animal\+\_\+linked\+\_\+list\+\_\+new(), animal\+\_\+new(), and fill\+\_\+table().
 
 
 
@@ -41,43 +404,49 @@ Referenced by activate().
 
 
 \begin{DoxyCode}
-7                                                 \{
-8     GtkWidget *window;
-9     GtkWidget *mainContainer;
-10 
-11     window = gtk\_application\_window\_new (app);
-12     gtk\_window\_set\_title (GTK\_WINDOW (window), \textcolor{stringliteral}{"Ogród zoologiczny"});
-13     gtk\_window\_set\_default\_size (GTK\_WINDOW (window), 500, 500);
-14 
-15     mainContainer = gtk\_grid\_new();
-16     gtk\_container\_add(GTK\_CONTAINER (window), GTK\_WIDGET (mainContainer));
-17 
-18     GtkWidget *containerTable;
-19     containerTable = gtk\_scrolled\_window\_new(NULL, NULL);
-20     gtk\_widget\_set\_hexpand(containerTable, 1);
-21     gtk\_widget\_set\_vexpand(containerTable, 1);
-22     GtkWidget *table;
-23     table = gtk\_grid\_new();
-24     gtk\_container\_add(GTK\_CONTAINER(containerTable), GTK\_WIDGET(table));
-25     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<200; ++i)\{
-26         GtkWidget *label = gtk\_label\_new(\textcolor{stringliteral}{"Test"});
-27         gtk\_label\_set\_xalign(GTK\_LABEL (label), 0.0);
-28         gtk\_widget\_set\_margin\_start(label, 5);
-29         gtk\_widget\_set\_margin\_top(label, 5);
-30         gtk\_widget\_set\_hexpand(label, TRUE);
-31         gtk\_grid\_attach(GTK\_GRID (table), label, 0, i, 1, 1);
-32     \}
-33 
-34     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (containerTable), 0, 1, 1, 1);
-35 
-36     GtkWidget *buttonAddAnimal;
-37     buttonAddAnimal = gtk\_button\_new();
-38     gtk\_button\_set\_label(GTK\_BUTTON (buttonAddAnimal), \textcolor{stringliteral}{"Dodaj zwierzę"});
-39     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (buttonAddAnimal), 0, 2, 1, 1);
-40     gtk\_widget\_set\_hexpand(buttonAddAnimal, 1);
-41     gtk\_widget\_show\_all (window);
-42 \}
+50 \{
+51 
+52     GtkWidget* window;
+53     GtkWidget* mainContainer;
+54 
+55     window = gtk\_application\_window\_new (app);
+56     gtk\_window\_set\_title (GTK\_WINDOW (window), \textcolor{stringliteral}{"Ogród zoologiczny"});
+57     gtk\_window\_set\_default\_size (GTK\_WINDOW (window), 500, 500);
+58 
+59     mainContainer = gtk\_grid\_new();
+60     gtk\_container\_add(GTK\_CONTAINER (window), GTK\_WIDGET (mainContainer));
+61 
+62     GtkWidget* containerTable;
+63     containerTable = gtk\_scrolled\_window\_new(NULL, NULL);
+64     gtk\_widget\_set\_hexpand(containerTable, 1);
+65     gtk\_widget\_set\_vexpand(containerTable, 1);
+66     GtkWidget* table;
+67     table = gtk\_grid\_new();
+68     \mbox{\hyperlink{struct_animal_linked_list}{AnimalLinkedList}}* animals = \mbox{\hyperlink{animal_8h_a5d57c899f6584a225dda3cacc771a1b7}{animal\_linked\_list\_new}}();
+69 
+70     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<200; ++i)\{
+71         \mbox{\hyperlink{struct_animal}{Animal}}* a = \mbox{\hyperlink{animal_8h_af6d6189ffd7e3fb411e0c2e7386b5103}{animal\_new}}(i, \textcolor{stringliteral}{"Blazej"}, \textcolor{stringliteral}{"Wielblad"}, i/4+3, \textcolor{stringliteral}{"Je orzeszki"});
+72         \mbox{\hyperlink{animal_8h_a56aa81831577f1bc41977c699e832363}{animal\_linked\_list\_add\_item}}(animals, a);
+73     \}
+74     gtk\_container\_add(GTK\_CONTAINER(containerTable), GTK\_WIDGET(table));
+75     gtk\_grid\_set\_column\_homogeneous(GTK\_GRID(table), gtk\_true());
+76     gtk\_grid\_set\_column\_homogeneous(GTK\_GRID(mainContainer), gtk\_true());
+77     \mbox{\hyperlink{main__window_8c_af1eaf0a9c2a7070f525386bb7ef4bac0}{add\_table\_headers}}(mainContainer, table, animals);
+78     \mbox{\hyperlink{main__window_8c_a7cd8ebd9f8b95eb48255fa9217843ca7}{fill\_table}}(table, animals);
+79     gtk\_grid\_attach(GTK\_GRID (mainContainer), GTK\_WIDGET (containerTable), 0, 1, 5, 1);
+80     \mbox{\hyperlink{main__window_8c_acb8a7744ef425d1083a95017a3eaf1d7}{add\_control\_buttons}}(app, mainContainer);
+81 
+82     \textcolor{keywordflow}{return} window;
+83 \}
 \end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__window_8h_adcf0e83db47ee039761c9b42887a6c6c_cgraph}
+\end{center}
+\end{figure}
 Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
