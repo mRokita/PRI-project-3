@@ -34,6 +34,10 @@ typedef struct SortCallbackData {
     GtkWidget* table;
 } SortCallbackData;
 
+typedef struct AddCallbackData {
+    AnimalLinkedList* list;
+    GtkWidget* table;
+} AddCallbackData;
 GtkWidget*
 main_window_new(GtkApplication* app);
 

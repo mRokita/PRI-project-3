@@ -102,6 +102,16 @@ callback_remove_animal(
     g_signal_connect(G_OBJECT(win), "destroy", G_CALLBACK(callback_remove_animal_final), cd);
 }
 
+void
+callback_add_animal(
+        GtkWidget *widget,
+        gpointer callback_data
+        )
+{
+    AddCallbackData *cd = callback_data;
+    animal_linked_list_add_item(cd->list, animal_new(cd->list->size, "Grazyna", "Papuga", 121, "NOWY"));
+    fill_table(cd->table, cd->list);
+}
 
 /**
  * Add edit and delete buttons below the table
@@ -126,6 +136,10 @@ void add_control_buttons(GtkApplication* app,
     gtk_widget_set_hexpand(buttonAddAnimal, 1);
     gtk_widget_set_margin_start(buttonAddAnimal, 5);
     gtk_grid_attach(GTK_GRID(mainContainer), buttonAddAnimal, 2, 2, 3, 1);
+    AddCallbackData* ca = malloc(sizeof(AddCallbackData));
+    ca->list = animals;
+    ca->table = table;
+    g_signal_connect(G_OBJECT(buttonAddAnimal), "clicked", G_CALLBACK(callback_add_animal), ca);
 }
 
 int sort_by = -1;
