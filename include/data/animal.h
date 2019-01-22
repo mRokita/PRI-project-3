@@ -26,7 +26,6 @@ typedef struct Animal {
 } Animal;
 
 
-
 Animal*
 animal_new(int id, char* name, char* species, int age, char* comment);
 
@@ -38,6 +37,9 @@ typedef struct AnimalLinkedList {
 
 void
 animal_linked_list_sort(AnimalLinkedList *list, int (*cmp)(Animal *a, Animal *b));
+
+void
+animal_linked_list_remove_item(AnimalLinkedList* animals, int id);
 
 typedef struct AnimalLinkedListItem{
     Animal* value;

@@ -74,18 +74,32 @@ main_window_new(GtkApplication *app)
     add_table_headers(mainContainer, table, animals);
     fill_table(table, animals);
     gtk_grid_attach(GTK_GRID (mainContainer), GTK_WIDGET (containerTable), 0, 1, 5, 1);
-    add_control_buttons(app, mainContainer);
+    add_control_buttons(app, mainContainer, animals, table);
 
     return window;
 }
 
-void callback_remove_animal(
+
+void
+callback_remove_animal_final(
         GtkWidget *widget,
         gpointer callback_data)
-        {
-    int *id = malloc(sizeof(int));
-    *id = 10;
-    gtk_widget_show_all(remove_item_window_new((GtkApplication*)callback_data, id));
+{
+    RemoveItemCallbackData* cd = callback_data;
+    fill_table(cd->table, cd->animals);
+    save_data_to_file(cd->animals);
+}
+
+
+void
+callback_remove_animal(
+        GtkWidget *widget,
+        gpointer callback_data)
+{
+    RemoveItemCallbackData* cd = callback_data;
+    GtkWidget* win = remove_item_window_new(cd);
+    gtk_widget_show_all(win);
+    g_signal_connect(G_OBJECT(win), "destroy", G_CALLBACK(callback_remove_animal_final), cd);
 }
 
 
@@ -94,12 +108,18 @@ void callback_remove_animal(
  * @param mainContainer
  */
 void add_control_buttons(GtkApplication* app,
-                         GtkWidget *mainContainer)
+                         GtkWidget* mainContainer,
+                         AnimalLinkedList* animals,
+                         GtkWidget* table)
                          {
     GtkWidget* buttonRemoveAnimal = gtk_button_new_with_label("Usuń element");
     gtk_widget_set_hexpand(buttonRemoveAnimal, 1);
     gtk_grid_attach(GTK_GRID(mainContainer), buttonRemoveAnimal, 0, 2, 2, 1);
-    g_signal_connect(G_OBJECT(buttonRemoveAnimal), "clicked", G_CALLBACK(callback_remove_animal), (gpointer) app);
+    RemoveItemCallbackData *cd = malloc(sizeof(RemoveItemCallbackData));
+    cd->app = app;
+    cd->animals = animals;
+    cd->table = table;
+    g_signal_connect(G_OBJECT(buttonRemoveAnimal), "clicked", G_CALLBACK(callback_remove_animal), (gpointer) cd);
 
 
     GtkWidget* buttonAddAnimal = gtk_button_new_with_label("Dodaj element");

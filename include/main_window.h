@@ -47,7 +47,9 @@ add_table_headers (GtkWidget* mainContainer,
 
 void
 add_control_buttons(GtkApplication* app,
-        GtkWidget* mainContainer);
+                    GtkWidget* mainContainer,
+                    AnimalLinkedList* animals,
+                    GtkWidget* table);
 
 void
 fill_table(GtkWidget* table, AnimalLinkedList* animals);

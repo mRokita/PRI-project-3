@@ -18,18 +18,23 @@
 #include <gtk/gtk.h>
 #include <ctype.h>
 #include "../include/data/animal.h"
+#include "../include/remove_item_window.h"
 
 
 void
 callback_delete_item(GtkWidget* widget,
-            gpointer data){
-    int* value = (int*)data;
-    gtk_window_close(GTK_WINDOW(gtk_widget_get_toplevel(widget)));
+            gpointer callback_data){
+    RemoveItemCallbackData* cd = callback_data;
 
     if(gtk_entry_buffer_get_length(gtk_entry_get_buffer(GTK_ENTRY(widget))) == 0) return;
-    *value = atoi(
+    int id = atoi(
             gtk_entry_buffer_get_text(gtk_entry_get_buffer(GTK_ENTRY(widget))));
-    printf("vaL: %d\n", *value);
+
+    int valid = animal_linked_list_contains(cd->animals, id);
+    if(valid){
+        animal_linked_list_remove_item(cd->animals, id);
+        gtk_window_close(GTK_WINDOW(gtk_widget_get_toplevel(widget)));
+    }
 }
 
 void
@@ -46,18 +51,18 @@ callback_edited_field(GtkWidget* widget,
 }
 
 GtkWidget*
-remove_item_window_new(GtkApplication *app, int* idToRemoveBuffer){
+remove_item_window_new(RemoveItemCallbackData* cd){
     GtkWidget* window;
     GtkWidget* mainContainer;
     mainContainer = gtk_grid_new();
-    window = gtk_application_window_new(app);
+    window = gtk_application_window_new(cd->app);
 
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER_ON_PARENT);
     gtk_window_set_modal(GTK_WINDOW(window), gtk_true());
     //gtk_window_set_position(window, gtk_window_posi)
     gtk_container_add(GTK_CONTAINER(window), mainContainer);
     GtkEntry* entryId = gtk_entry_new();
-    g_signal_connect(entryId, "activate", G_CALLBACK(callback_delete_item), idToRemoveBuffer);
+    g_signal_connect(entryId, "activate", G_CALLBACK(callback_delete_item), cd);
     g_signal_connect(gtk_entry_get_buffer(GTK_ENTRY(entryId)), "inserted-text", G_CALLBACK(callback_edited_field), NULL);
     gtk_entry_set_placeholder_text(entryId, "Id elementu");
     gtk_grid_attach(GTK_GRID(mainContainer), entryId, 0, 0, 1, 1);

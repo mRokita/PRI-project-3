@@ -21,5 +21,11 @@
 
 #include <gtk/gtk.h>
 
-GtkWidget* remove_item_window_new(GtkApplication *app, int* idToRemoveBuffer);
+typedef struct RemoveItemCallbackData {
+    GtkApplication *app;
+    AnimalLinkedList *animals;
+    GtkWidget *table;
+} RemoveItemCallbackData;
+
+GtkWidget* remove_item_window_new(RemoveItemCallbackData* cd);
 #endif //PRI3_REMOVE_ITEM_WINDOW_H

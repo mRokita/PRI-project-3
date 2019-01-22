@@ -30,13 +30,37 @@ animal_linked_list_item_new(Animal* value){
 
 int
 animal_linked_list_contains(AnimalLinkedList* animals, int id){
-    Animal* cur = animals->firstItem;
+    AnimalLinkedListItem* cur = animals->firstItem;
     for(int i=0; i<animals->size; ++i){
-        if (cur->id == id) return 1;
+        if (cur->value->id == id) return 1;
+        cur = cur->next;
     }
     return 0;
 }
 
+void
+animal_linked_list_remove_item(AnimalLinkedList* animals, int id){
+    AnimalLinkedListItem* cur = animals->firstItem;
+    for(int i=0; i<animals->size; ++i){
+        if (cur->value->id == id){
+            if(cur == animals->firstItem){
+                animals->firstItem = cur->next;
+            } else {
+                cur->prev->next = cur->next;
+            }
+
+            if(cur == animals->lastItem){
+                animals->lastItem = cur->prev;
+            } else {
+                cur->next->prev = cur->prev;
+            }
+            animals->size --;
+            free(cur);
+            return;
+        }
+        cur = cur->next;
+    }
+}
 
 Animal*
 animal_new(int id, char* name, char* species, int age, char* comment){
