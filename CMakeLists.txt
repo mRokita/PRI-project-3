@@ -10,5 +10,5 @@ link_directories(${GTK3_LIBRARY_DIRS})
 
 add_definitions(${GTK3_CFLAGS_OTHER})
 
-add_executable(PRI3 src/main.c src/main_window.c include/main_window.h src/services/http.c include/services/http.h src/data/animal.c include/data/animal.h src/remove_item_window.c include/remove_item_window.h)
+add_executable(PRI3 src/main.c src/main_window.c include/main_window.h src/services/http.c include/services/http.h src/data/animal.c include/data/animal.h src/remove_item_window.c include/remove_item_window.h src/services/file.c include/services/file.h)
 target_link_libraries(PRI3 ${GTK3_LIBRARIES})

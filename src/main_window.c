@@ -19,6 +19,7 @@
 #include "../include/main_window.h"
 #include "../include/data/animal.h"
 #include "../include/remove_item_window.h"
+#include "../include/services/file.h"
 
 
 /**
@@ -66,11 +67,7 @@ main_window_new(GtkApplication *app)
     GtkWidget* table;
     table = gtk_grid_new();
     AnimalLinkedList* animals = animal_linked_list_new();
-
-    for(int i=0; i<200; ++i){
-        Animal* a = animal_new(i, "Blazej", "Wielblad", i/4+3, "Je orzeszki");
-        animal_linked_list_add_item(animals, a);
-    }
+    load_data_from_file(animals);
     gtk_container_add(GTK_CONTAINER(containerTable), GTK_WIDGET(table));
     gtk_grid_set_column_homogeneous(GTK_GRID(table), gtk_true());
     gtk_grid_set_column_homogeneous(GTK_GRID(mainContainer), gtk_true());
@@ -86,7 +83,9 @@ void callback_remove_animal(
         GtkWidget *widget,
         gpointer callback_data)
         {
-    gtk_widget_show_all(remove_item_window_new((GtkApplication*)callback_data));
+    int *id = malloc(sizeof(int));
+    *id = 10;
+    gtk_widget_show_all(remove_item_window_new((GtkApplication*)callback_data, id));
 }
 
 

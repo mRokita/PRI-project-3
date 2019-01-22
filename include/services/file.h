@@ -14,12 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
+#ifndef PRI3_FILE_H
+#define PRI3_FILE_H
+#include "../../include/services/file.h"
+#include "../../include/data/animal.h"
 
+void
+load_data_from_file(AnimalLinkedList* list);
 
-#ifndef PRI3_REMOVE_ITEM_WINDOW_H
-#define PRI3_REMOVE_ITEM_WINDOW_H
+void
+save_data_to_file(AnimalLinkedList* animals);
 
-#include <gtk/gtk.h>
-
-GtkWidget* remove_item_window_new(GtkApplication *app, int* idToRemoveBuffer);
-#endif //PRI3_REMOVE_ITEM_WINDOW_H
+#endif //PRI3_FILE_H

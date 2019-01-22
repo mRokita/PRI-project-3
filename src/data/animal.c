@@ -28,7 +28,6 @@ animal_linked_list_item_new(Animal* value){
     return item;
 }
 
-
 int
 animal_linked_list_contains(AnimalLinkedList* animals, int id){
     Animal* cur = animals->firstItem;

@@ -16,20 +16,37 @@
 */
 
 #include <gtk/gtk.h>
+#include <ctype.h>
 #include "../include/data/animal.h"
 
 
 void
 callback_delete_item(GtkWidget* widget,
             gpointer data){
-    printf("%d\n", atoi(
-            gtk_entry_buffer_get_text(gtk_entry_get_buffer(GTK_ENTRY(widget)))));
-    printf("Delete %s\n", gtk_entry_buffer_get_text(gtk_entry_get_buffer(GTK_ENTRY(widget))));
+    int* value = (int*)data;
+    gtk_window_close(GTK_WINDOW(gtk_widget_get_toplevel(widget)));
+
+    if(gtk_entry_buffer_get_length(gtk_entry_get_buffer(GTK_ENTRY(widget))) == 0) return;
+    *value = atoi(
+            gtk_entry_buffer_get_text(gtk_entry_get_buffer(GTK_ENTRY(widget))));
+    printf("vaL: %d\n", *value);
 }
 
+void
+callback_edited_field(GtkWidget* widget,
+                     gpointer data){
+    char *textCur = (char *) gtk_entry_buffer_get_text(GTK_ENTRY_BUFFER(widget));
+
+    for(int i=0; i<gtk_entry_buffer_get_length(GTK_ENTRY_BUFFER(widget)); ++i) {
+        if (!isdigit(textCur[i])) {
+            gtk_entry_buffer_delete_text(GTK_ENTRY_BUFFER(widget), i, 1);
+            i--;
+        }
+    }
+}
 
 GtkWidget*
-remove_item_window_new(GtkApplication *app, AnimalLinkedList animals){
+remove_item_window_new(GtkApplication *app, int* idToRemoveBuffer){
     GtkWidget* window;
     GtkWidget* mainContainer;
     mainContainer = gtk_grid_new();
@@ -40,7 +57,8 @@ remove_item_window_new(GtkApplication *app, AnimalLinkedList animals){
     //gtk_window_set_position(window, gtk_window_posi)
     gtk_container_add(GTK_CONTAINER(window), mainContainer);
     GtkEntry* entryId = gtk_entry_new();
-    g_signal_connect(entryId, "activate", G_CALLBACK(callback_delete_item), NULL);
+    g_signal_connect(entryId, "activate", G_CALLBACK(callback_delete_item), idToRemoveBuffer);
+    g_signal_connect(gtk_entry_get_buffer(GTK_ENTRY(entryId)), "inserted-text", G_CALLBACK(callback_edited_field), NULL);
     gtk_entry_set_placeholder_text(entryId, "Id elementu");
     gtk_grid_attach(GTK_GRID(mainContainer), entryId, 0, 0, 1, 1);
     gtk_widget_set_hexpand(entryId, 1);
