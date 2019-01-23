@@ -39,7 +39,7 @@ load_data_from_file(AnimalLinkedList* animals)
         }
         printf("\n");
     }
-    FILE *file = fopen("/home/mrokita/zoo.dat", "r");
+    FILE *file = fopen("zoo.dat", "r");
 
     printf("\n");
 
