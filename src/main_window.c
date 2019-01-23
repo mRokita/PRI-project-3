@@ -111,6 +111,7 @@ callback_add_animal(
     AddCallbackData *cd = callback_data;
     animal_linked_list_add_item(cd->list, animal_new(cd->list->size, "Grazyna", "Papuga", 121, "NOWY"));
     fill_table(cd->table, cd->list);
+    save_data_to_file(cd->list);
 }
 
 /**

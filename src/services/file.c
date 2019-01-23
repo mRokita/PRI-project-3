@@ -81,6 +81,7 @@ load_data_from_file(AnimalLinkedList* animals)
         while (1){
             int res = fscanf(file, "%d\t%s\t%s\t%d\t%s\n", &id, name, species, &age, comment);
             if(res == 5) animal_linked_list_add_item(animals, animal_new(id, name, species, age, comment));
+
             if(res == EOF | res == 0) break;
         }
         fclose(file);
@@ -90,7 +91,7 @@ load_data_from_file(AnimalLinkedList* animals)
 void
 save_data_to_file(AnimalLinkedList* animals)
 {
-    FILE *file = fopen("/home/mrokita/zoo.dat", "w");
+    FILE *file = fopen("zoo.dat", "w");
     AnimalLinkedListItem* cur = animals->firstItem;
     for(int i=0; i<animals->size;++i){
         printf("Saving animal #%d\n", cur->value->id);
